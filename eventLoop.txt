@@ -1,0 +1,34 @@
+WEB APIs:
+DOM 
+AJAX
+Set7imeout
+
+
+one thread == one call stack == one thing at a time
+
+Call Stack is a data structure that records where 
+we are in that single thread.
+
+first is going through functions definitons (declaring them, not executing)
+When nesting, it adds to the pile what's sort of pending (because, say, we are executing a functiong that executes another, so we go into that one putting on hold the former one. Like inception)
+Base of that function might be anonymous function (seen when console throws an error). That anon is the file itself
+
+BLOCKING: We call blocking to any function that's slow (e.g. network requests)
+
+
+So we want to avoid to wait for thing to happen while we could be running other chunks of code
+(You can't do that in Ruby)
+
+So it's called blocking because it's blocking the call stack from working on something else (things that are slow are never computed by CPU/RAM)
+
+So in ASYNC functions, the TASK is removed from the call stack. and handled by webapis. When it's finished it moves to the task queue
+THEN COMES THE EVENT LOOP. What it does is to check if the stack is empty, if it is, it's going to take the first returned value from the task queue 
+
+So that explains why we use setTimeout(function cb(){
+
+}, 0);
+
+That zero means "run this function inmediately. Once it's done, check if the stack is already empty and return the value. So if are MULTIPLE TASKS IN TASK QEUE, EVENT LOOP is going to make the CALL STACK handle ONE BY ONE clearing out that stack between them. 
+
+Really, calling callbacks to any function executed within another function is dumb. It has to be asynchronous
+
