@@ -4,8 +4,12 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,10 @@
   "devDependencies": {
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "dotenv-quokka-plugin": "^1.0.0",
+    "jsdom": "^16.5.3",
+    "node-fetch": "^2.6.1"
   }
 }
