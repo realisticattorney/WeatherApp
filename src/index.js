@@ -22,6 +22,23 @@ function selectQuery(e) {
   searchForm[0].value = ""
   }
   
+  
+function lol(e) {
+    const input = e
+    const promise = asyncWeather(`${input}`)
+    
+    const result = promise.then(function(result){
+      
+      for(let property in result) {
+        const p = document.createElement('p')  
+    console.log(property)
+    p.innerText = `${property}: ${result[property]}`
+    p.classList.add(`${property}`)
+    p.setAttribute('id', result[property] )
+    article.appendChild(p)
+}
+})
+  }
 
 
 
