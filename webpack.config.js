@@ -41,6 +41,10 @@ module.exports = {
           disable: true,
         },
       },
+         {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      }
     ],
   },
 };

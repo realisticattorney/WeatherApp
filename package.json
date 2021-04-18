@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/realisticattorney/WeatherApp#readme",
   "devDependencies": {
+    "css-loader": "^5.2.2",
+    "style-loader": "^2.0.0",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
+    "bootswatch": "^4.6.0",
     "dotenv-quokka-plugin": "^1.0.0",
     "jsdom": "^16.5.3",
     "node-fetch": "^2.6.1"

@@ -1,3 +1,4 @@
+import "bootswatch/dist/minty/bootstrap.min.css"
 import asyncWeather from './APIfetcher.js'
 
 window.onload = () => {
@@ -16,8 +17,6 @@ function selectQuery(e) {
   e.preventDefault()
   if(searchForm[0].value == '') {return}
   const city = e.target[0].value
-    while (article.firstChild) {
-    article.removeChild(article.firstChild);}
     lol(city)
   searchForm[0].value = ""
   }
@@ -26,16 +25,13 @@ function selectQuery(e) {
 function lol(e) {
     const input = e
     const promise = asyncWeather(`${input}`)
-    
     const result = promise.then(function(result){
-      
       for(let property in result) {
-        const p = document.createElement('p')  
-    console.log(property)
-    p.innerText = `${property}: ${result[property]}`
-    p.classList.add(`${property}`)
-    p.setAttribute('id', result[property] )
-    article.appendChild(p)
+        const query = `#${property}`
+        let prop = document.querySelector(query)  
+        console.log(prop)
+    prop.innerText = `${result[property]}`
+  //  prop.setAttribute('class', result[property] )
 }
 })
   }
