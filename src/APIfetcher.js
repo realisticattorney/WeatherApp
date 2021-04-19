@@ -1,5 +1,7 @@
 export default async function asyncWeather(city = 'London') {
-  const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=1bc3162ef9f1c153a0e6581ca59c403f`);
+  const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=1bc3162ef9f1c153a0e6581ca59c403f`, {
+    mode: 'cors',
+  });
   const data = await response.json();
   return {
     humidity: data.main.humidity,
