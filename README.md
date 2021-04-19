@@ -1,11 +1,9 @@
-# WeatherApp
+# SimpleWeather
 
-> The purpose of this project was to build an app where users can create lists (called projects) where they can add to-do tasks, each with its title, description, date, and priority level. The data is stored locally in the user's browser.
+> SimpleWeather is an app that integrates OpenWeather API to give users information about the weather of any city in the world. The purpose of this project was to implement async functions.
 
 ![screenshot](./dist/assets/screenshot.png)
 
-
-Additional description about the project and its features.
 
 ## Built With
 

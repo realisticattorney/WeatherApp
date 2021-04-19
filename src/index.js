@@ -22,6 +22,7 @@ function weatherDOM(e) {
     });
   });
 }
+
 function selectQuery(e) {
   e.preventDefault();
   if (searchForm[0].value === '') { return; }
