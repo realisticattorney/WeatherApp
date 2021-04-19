@@ -9,9 +9,9 @@ const gif = async (status) => {
   } else if (status === 'Rain') {
     statusGif.src = ('https://media.giphy.com/media/xUOwGoNa2uX6M170d2/giphy.gif');
   } else if (status === 'Snow') {
-    statusGif.src = ('https://media.giphy.com/media/tIHktzgRi8yjIplFVI/giphy.gif');
+    statusGif.src = ('https://media.giphy.com/media/mBu1wMFap6ePprKIeX/giphy.gif');
   } else {
-    statusGif.src = ('https://media.giphy.com/media/tIHktzgRi8yjIplFVI/giphy.gif'
+    statusGif.src = ('https://media.giphy.com/media/YkhsU98c5KsPjsTwdp/giphy.gif')
   }
 };
 export default gif;
