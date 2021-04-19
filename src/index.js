@@ -3,7 +3,7 @@ import gif from './GIFfetcher';
 
 const searchForm = document.querySelector('#search-bar');
 
-function weatherDOM(e) {
+const weatherDOM = (e) => {
   const input = e;
   const promise = asyncWeather(`${input}`);
   promise.then((result) => {
@@ -21,10 +21,10 @@ function weatherDOM(e) {
       }
     });
   });
-}
+};
 const celciusButton = document.querySelector('#converter');
 
-function selectQuery(e) {
+const selectQuery = (e) => {
   e.preventDefault();
   if (searchForm[0].value === '') { return; }
   const city = e.target[0].value;
@@ -32,14 +32,14 @@ function selectQuery(e) {
   searchForm[0].value = '';
   celciusButton.className = 'btn btn-success';
   celciusButton.innerText = 'Convert to Fahrenheit';
-}
+};
 searchForm.addEventListener('submit', selectQuery);
 
 window.onload = () => {
   weatherDOM('London');
 };
 
-function converter(e) {
+const converter = (e) => {
   const temp = document.querySelector('#temp_celcius');
   const tempMax = document.querySelector('#temp_max');
   const tempMin = document.querySelector('#temp_min');
@@ -56,6 +56,6 @@ function converter(e) {
     e.path[0].className = 'btn btn-success';
     e.path[0].innerText = 'Convert to Fahrenheit';
   }
-}
+};
 
 celciusButton.addEventListener('click', converter);
