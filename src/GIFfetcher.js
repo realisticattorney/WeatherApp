@@ -11,7 +11,7 @@ const gif = async (status) => {
   } else if (status === 'Snow') {
     statusGif.src = ('https://media.giphy.com/media/mBu1wMFap6ePprKIeX/giphy.gif');
   } else {
-    statusGif.src = ('https://media.giphy.com/media/YkhsU98c5KsPjsTwdp/giphy.gif')
+    statusGif.src = ('https://media.giphy.com/media/YkhsU98c5KsPjsTwdp/giphy.gif');
   }
 };
 export default gif;
