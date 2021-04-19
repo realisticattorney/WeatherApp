@@ -33,7 +33,6 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.19.0",
-    "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
@@ -41,8 +40,6 @@
     "dotenv-quokka-plugin": "^1.0.0",
     "jsdom": "^16.5.3",
     "node-fetch": "^2.6.1",
-    "webpack-dev-server": "^3.11.2",
-    "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0"
+    "webpack": "^5.33.2"
   }
 }
