@@ -4,12 +4,6 @@
 
 ![screenshot](./dist/assets/screenshot.png)
 
-
-## Live demo
-
-[live demo](https://rawcdn.githack.com/realisticattorney/WeatherApp/2e047673e0175d28bd038fef55934a7ac2af7178/dist/index.html)
-
-
 ## Built With
 
 - Javascript
