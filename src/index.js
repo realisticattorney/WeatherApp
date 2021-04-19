@@ -45,8 +45,8 @@ function converter(e) {
   const tempMin = document.querySelector('#temp_min');
   if (e.path[0].className === 'btn btn-success') {
     temp.innerHTML = `${Math.round((parseInt(temp.innerHTML, 10) * (9 / 5)) + 32)} F`;
-    tempMax.innerHTML = `${(parseInt(tempMax.innerHTML, 10) * (9 / 5)) + 32} F`;
-    tempMin.innerHTML = `${(parseInt(tempMin.innerHTML, 10) * (9 / 5)) + 32} F`;
+    tempMax.innerHTML = `${(Math.round(parseInt(tempMax.innerHTML, 10) * (9 / 5)) + 32)} F`;
+    tempMin.innerHTML = `${Math.round((parseInt(tempMin.innerHTML, 10) * (9 / 5)) + 32)} F`;
     e.path[0].className = 'btn btn-primary';
     e.path[0].innerText = 'Convert to Celcius';
   } else if (e.path[0].className === 'btn btn-primary') {
