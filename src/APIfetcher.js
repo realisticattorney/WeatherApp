@@ -16,7 +16,6 @@ const asyncWeather = async (city = 'London') => {
       country: data.sys.country,
     };
   } catch (error) {
-    return asyncWeather();
   }
 };
 
