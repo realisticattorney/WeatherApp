@@ -22,6 +22,7 @@ function weatherDOM(e) {
     });
   });
 }
+const celciusButton = document.querySelector('#converter');
 
 function selectQuery(e) {
   e.preventDefault();
@@ -29,6 +30,8 @@ function selectQuery(e) {
   const city = e.target[0].value;
   weatherDOM(city);
   searchForm[0].value = '';
+  celciusButton.className = 'btn btn-success';
+  celciusButton.innerText = 'Convert to Fahrenheit';
 }
 searchForm.addEventListener('submit', selectQuery);
 
@@ -41,12 +44,12 @@ function converter(e) {
   const tempMax = document.querySelector('#temp_max');
   const tempMin = document.querySelector('#temp_min');
   if (e.path[0].className === 'btn btn-success') {
-    temp.innerHTML = `${(parseInt(temp.innerHTML, 10) * (9 / 5)) + 32} F`;
+    temp.innerHTML = `${Math.round((parseInt(temp.innerHTML, 10) * (9 / 5)) + 32)} F`;
     tempMax.innerHTML = `${(parseInt(tempMax.innerHTML, 10) * (9 / 5)) + 32} F`;
     tempMin.innerHTML = `${(parseInt(tempMin.innerHTML, 10) * (9 / 5)) + 32} F`;
     e.path[0].className = 'btn btn-primary';
     e.path[0].innerText = 'Convert to Celcius';
-  } else {
+  } else if (e.path[0].className === 'btn btn-primary') {
     temp.innerHTML = `${temp.celcius} C`;
     tempMax.innerHTML = `${tempMax.celcius} C`;
     tempMin.innerHTML = `${tempMin.celcius} C`;
@@ -55,5 +58,4 @@ function converter(e) {
   }
 }
 
-const celciusButton = document.querySelector('#converter');
 celciusButton.addEventListener('click', converter);
