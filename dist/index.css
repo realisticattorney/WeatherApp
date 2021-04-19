@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 
 footer {
   padding-top: 70px;
@@ -9,6 +10,10 @@ footer {
   background-color: rgb(211, 211, 211)
 }
 
-@import "~bootswatch/dist/minty/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/minty/bootswatch";
+nav {
+  margin-bottom: 30px
+}
+
+.container {
+  width: 35%
+}

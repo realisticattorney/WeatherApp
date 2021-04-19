@@ -1,4 +1,4 @@
-import "bootswatch/dist/minty/bootstrap.min.css"
+// import "bootswatch/dist/minty/bootstrap.min.css"
 import asyncWeather from './APIfetcher.js'
 import gif from "./GIFfetcher.js"
 
@@ -44,7 +44,7 @@ function converter(e) {
   const temp = document.querySelector('#temp_celcius')
   const temp_max = document.querySelector('#temp_max')
   const temp_min = document.querySelector('#temp_min')
-  if(e.path[0].className == 'btn btn-secondary') {
+  if(e.path[0].className == 'btn btn-success') {
     temp.innerHTML = `${(parseInt(temp.innerHTML) *(9/5)) + 32} F`
     temp_max.innerHTML = `${(parseInt(temp_max.innerHTML) *(9/5)) + 32} F`
     temp_min.innerHTML = `${(parseInt(temp_min.innerHTML) *(9/5)) + 32} F`
@@ -54,7 +54,7 @@ function converter(e) {
   temp.innerHTML = `${temp.celcius} C`
   temp_max.innerHTML = `${temp_max.celcius} C`
   temp_min.innerHTML = `${temp_min.celcius} C`
-  e.path[0].className = 'btn btn-secondary'
+  e.path[0].className = 'btn btn-success'
   e.path[0].innerText = 'Convert to Fahrenheit'
 }
 }
