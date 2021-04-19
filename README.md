@@ -5,10 +5,9 @@
 ![screenshot](./dist/assets/screenshot.png)
 
 
-
 ## Live demo
 
-[live demo](https://raw.githack.com/realisticattorney/WeatherApp/tree/weatherAPI)
+[live demo](https://rawcdn.githack.com/realisticattorney/WeatherApp/2e047673e0175d28bd038fef55934a7ac2af7178/dist/index.html)
 
 
 ## Built With
@@ -20,11 +19,38 @@
 
 ## Getting Started
 
-Open your terminal and cd where you want to store the project
-Run the following command - git clone https://github.com/realisticattorney/WeatherApp
-Cd into the directory - cd Library
-Open the live server on your VScode Alt + L then Alt + o
-To get a local copy up and running follow these simple example steps.
+- Live Server plugin for Visual Studio Code 
+
+### Setup
+
+1- Clone the repository
+```
+  git clone  https://github.com/realisticattorney/WeatherApp.git
+```
+2- Open the folder on VS Code. 
+```
+    cd WeatherApp
+    code .
+```
+
+3- Right click the dist/index.html file and click on "Open With Live Server"
+
+4- Everything should be running by now. 
+
+
+### JavaScript Build
+
+Run the next on your terminal in the repository folder:
+
+- For development:
+```
+    npm run webpack
+```
+
+- For production:
+```
+    npm run build
+```
 
 ## Author
 
