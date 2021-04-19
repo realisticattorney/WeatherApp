@@ -1,9 +1,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>SimpleWeather</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link href="./index.css">
+  <link rel="stylesheet"  href="./index.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -17,28 +20,22 @@
     </form>
   </div>
 </nav>
-
-  <img src=""> 
-  <script>
-  </script>
   <div class="container">
-
+    
     <div class="card mb-3">
       <div class="card-header">
         <div class="row">
           <h5 id="country"></h5>
           <h3 id="city"></h3>
-      </div></div>
-      <div class="card-body">
-        <h5 class="card-title">Temperature: <span id="temp_fah"></span></h5>
-        <h6 id="description" class="card-subtitle text-muted"></h6>
+        </div></div>
+        <div class="card-body">
+          <h5 class="card-title">Temperature: <span id="temp_celcius"></span></h5>
+          <h6 id="description" class="card-subtitle text-muted"></h6>
+          
+        </div>
+        <img src="" class="d-block user-select-none" width="400" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
         <h6 id="short_description" class="card-subtitle text-muted"></h6>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-        <rect width="100%" height="100%" fill="#868e96"></rect>
-        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-      </svg>
-      <div class="card-body">
+        <div class="card-body">
         <p class="card-text">Speed: <span id="speed"></span>km/h</p>
         <p class="card-text">Humidity: <span id="humidity"></span>%</p>
       </div>
@@ -47,8 +44,7 @@
         <li id="temp_min_container" class="list-group-item">Min Temp: <span id="temp_min"></span></li>
       </ul>
       <div class="card-body">
-        <a href="#" class="card-link">Fahrenheit</a>
-        <a href="#" class="card-link">Celcius</a>
+        <button id="converter" type="button" class="btn btn-secondary">Convert to Fahrenheit</button>
       </div>
       <div class="card-footer text-muted">
         Maybe the current time there
@@ -56,7 +52,14 @@
     </div>
     
     </div>
-  
+
+    <footer class="footer">
+      <div>
+        <h6>
+          <strong>SimpleWeather</strong> by <a href="http://germanaquila.me/">German Aquila</a>.
+        </h6>
+      </div>
+    </footer>
   <script src="main.js"></script>
 </body>
 </html>
