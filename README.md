@@ -1,6 +1,6 @@
 # SimpleWeather
 
-> SimpleWeather is an app that integrates OpenWeather API to give users information about the weather of any city in the world. The purpose of this project was to implement async functions.
+> SimpleWeather is an app that integrates OpenWeather API to give users information about the weather of any city in the world. The purpose of this project was to implement async functions. 
 
 ![screenshot](./dist/assets/screenshot.png)
 
