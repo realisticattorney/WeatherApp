@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SimpleWeather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="./assets/index.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <nav class="navbar navbar-dark bg-primary">
+    
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-umbrella"></i> SimpleWeather</a>
+      
+      <div id="navbarColor01" class="mx-auto w-50">
+        <form id="search-bar" class="form-inline my-2 my-lg-0">
+          <input class="form-control pr-5 ml-5 mr-sm-2 w-50" type="text" placeholder="Which city?" >
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="error-message"></div>
+    <div class="container">
+    
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="row">
+          <h3 id="city" class="text-muted ml-1"></h3>
+          <div class="ml-auto mr-2">
+          <h5 id="country" class="text-muted"></h5></div>
+        </div></div>
+        <div class="card-body ">
+          <h5 class="card-title">Temperature: <span id="temp_celcius"></span></h5>
+          <h6 id="description" class="card-subtitle text-muted"></h6>
+          
+        </div>
+        <img src="" class="d-block user-select-none mx-auto" width="400" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+        <h6 id="short_description" class="card-subtitle text-muted"></h6>
+        <div class="card-body">
+        <p class="card-text">Speed: <span id="speed"></span>km/h</p>
+        <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+      </div>
+      <ul class="list-group list-group-flush">
+      <li id="temp_max_container" class="list-group-item">Max Temp: <span id="temp_max"></span></li>
+        <li id="temp_min_container" class="list-group-item">Min Temp: <span id="temp_min"></span></li>
+      </ul>
+      <div class="card-body ml-auto">
+        <button id="converter" type="button" class="btn btn-success">Convert to Fahrenheit</button>
+      </div>
+    </div>
+    
+    </div>
+
+    <footer class="footer">
+      <div>
+        <h6>
+          <strong><i class="fas fa-umbrella"></i> SimpleWeather</strong> by <a href="http://germanaquila.me/">German Aquila</a>.
+        </h6>
+      </div>
+    </footer>
+  <script src="main.js"></script>
+</body>
+</html>
+
+

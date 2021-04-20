@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap";
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(211, 211, 211)
+}
+
+nav {
+  margin-bottom: 30px
+}
+
+.container {
+  width: 35%
+}
